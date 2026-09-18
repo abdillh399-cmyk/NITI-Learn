@@ -1,0 +1,2 @@
+-- NITI Learn database schema is managed by SQLAlchemy models.
+-- The application creates missing tables automatically on startup.
