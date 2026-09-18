@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: niti-learn
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn wsgi:app
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: niti-learn-db
+          property: connectionString
+
+databases:
+  - name: niti-learn-db
+    databaseName: niti_learn
+    user: niti_learn
