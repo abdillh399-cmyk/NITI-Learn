@@ -1,0 +1,1 @@
+console.log('NITI Learn ready');
